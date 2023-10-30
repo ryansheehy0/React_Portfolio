@@ -32,7 +32,7 @@ export default function Corner({triangleLength, clipPath, origin, textOrigin, te
   })
 
   return (
-    <div style={{clipPath, width: triangleLength, height: triangleLength}} className={`${visible ? "bg-white" : "bg-transparent"} absolute ${visible ? "cursor-pointer" : "cursor-default"} ${origin} transition-[background-color] ease-in-out delay-300`} onClick={clickEventFunction}>
+    <div style={{clipPath, width: triangleLength, height: triangleLength}} className={`bg-white absolute ${visible ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"} cursor-pointer ${origin} transition-opacity ease-in-out delay-300 z-10`} onClick={clickEventFunction}>
       <span style={{top : top(offset), left: left(offset), right: right(offset), width, height}} className={`text-2xl transition-[color] ease-in-out delay-300 ${visible ? "text-black" : "text-transparent"} inline-block relative ${textOrigin} ${textRotation} text-center`}>{text}</span>
     </div>
   )

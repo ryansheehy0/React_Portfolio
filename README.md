@@ -1,13 +1,7 @@
 # React Portfolio
 
 ## Todo
-- Set up animated corners
-  - About Me
-  - Portfolio
-  - Contacts
-  - Resume
 - Pages
-  - About Me
   - Portfolio
     - Random Flavors
     - Cheat Sheets
@@ -17,7 +11,5 @@
   - Contact
     - Form
   - Resume
-    - PDF
-
-- Add page component
-- Add 4 pages to App
+    - Blank PDF for now
+- Add comments

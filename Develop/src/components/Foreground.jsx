@@ -64,7 +64,7 @@ export default function Foreground({triangleLength}){
   window.addEventListener("openForeground", () => {setStyle(clipPath)})
 
   return (
-    <div style={style} className='bg-black text-white w-screen h-screen transition-[clip-path] ease-in-out delay-300'>
+    <div style={style} className='bg-black text-white w-screen h-screen transition-[clip-path] ease-in-out delay-300 z-10'>
       <div className="relative w-full h-auto">
         <img src="/profile_picture.png" className="w-[1000px] h-auto absolute -top-32 right-[calc(220px+25%)]"/>
       </div>
