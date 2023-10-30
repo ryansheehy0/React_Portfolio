@@ -9,8 +9,15 @@
 - Pages
   - About Me
   - Portfolio
-  - Contacts
+    - Random Flavors
+    - Cheat Sheets
+    - Adrift in Space
+    - Null Todos
+    - Project 3
+  - Contact
+    - Form
   - Resume
+    - PDF
 
 - Add page component
 - Add 4 pages to App

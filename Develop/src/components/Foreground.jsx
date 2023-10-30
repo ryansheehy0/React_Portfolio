@@ -1,7 +1,6 @@
 import {useState} from "react"
 
-export default function(){
-  const triangleLength = "200px"
+export default function Foreground({triangleLength}){
   const clipPath = {
     clipPath:  `
       polygon(
@@ -22,6 +21,42 @@ export default function(){
 				calc(100vw + 50vh - ${triangleLength}) 50vh, /*Top*/
 				calc(100vw + 50vh - ${triangleLength}) 50vh, /*Right*/
 				50vw calc(100vh + 50vw - ${triangleLength}) /*Bottom*/
+			)`
+    setStyle(newClipPath)
+  })
+
+  window.addEventListener("topRightOpen", () => {
+    const newClipPath = {...clipPath} // Pass by value
+    newClipPath.clipPath = `
+      polygon(
+				calc(-1 * (50vh - ${triangleLength})) 50vh, /*Left*/
+				calc(-1 * (50vh - ${triangleLength})) 50vh, /*Top*/
+				50vw calc(100vh + 50vw - ${triangleLength}), /*Right*/
+				50vw calc(100vh + 50vw - ${triangleLength}) /*Bottom*/
+			)`
+    setStyle(newClipPath)
+  })
+
+  window.addEventListener("bottomLeftOpen", () => {
+    const newClipPath = {...clipPath} // Pass by value
+    newClipPath.clipPath = `
+      polygon(
+				50vw calc(-1 * (50vw - ${triangleLength})), /*Left*/
+				50vw calc(-1 * (50vw - ${triangleLength})), /*Top*/
+				calc(100vw + 50vh - ${triangleLength}) 50vh, /*Right*/
+				calc(100vw + 50vh - ${triangleLength}) 50vh /*Bottom*/
+			)`
+    setStyle(newClipPath)
+  })
+
+  window.addEventListener("bottomRightOpen", () => {
+    const newClipPath = {...clipPath} // Pass by value
+    newClipPath.clipPath = `
+      polygon(
+				calc(-1 * (50vh - ${triangleLength})) 50vh, /*Left*/
+				50vw calc(-1 * (50vw - ${triangleLength})), /*Top*/
+				50vw calc(-1 * (50vw - ${triangleLength})), /*Right*/
+				calc(-1 * (50vh - ${triangleLength})) 50vh /*Bottom*/
 			)`
     setStyle(newClipPath)
   })

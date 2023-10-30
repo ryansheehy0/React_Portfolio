@@ -10,7 +10,7 @@ function App() {
       <Corner triangleLength={triangleLength} {...corners.topRight} />
       <Corner triangleLength={triangleLength} {...corners.bottomLeft} />
       <Corner triangleLength={triangleLength} {...corners.bottomRight} />
-      <Foreground />
+      <Foreground triangleLength={triangleLength} />
     </>
   )
 }
