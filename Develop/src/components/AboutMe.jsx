@@ -21,4 +21,3 @@ export default function AboutMe(){
 }
 
 export const pageTitle = "About Me"
-export const openEvent = "topLeftOpen"

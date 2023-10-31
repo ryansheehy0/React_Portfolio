@@ -1,7 +1,9 @@
-import { useState } from "react"
+import React, { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
-export default function Corner({triangleLength, clipPath, origin, textOrigin, textRotation, text, event, top, left, right}){
+export default function Corner({triangleLength, clipPath, origin, textOrigin, textRotation, text, pathName, event, top, left, right}){
   const [visible, setVisible] = useState(true)
+  const navigate = useNavigate()
 
   const width = "150px"
   const height = "35px"
@@ -12,12 +14,12 @@ export default function Corner({triangleLength, clipPath, origin, textOrigin, te
     if(visible){
       window.dispatchEvent(new CustomEvent(event))
       setVisible(false)
+      setTimeout(() => {
+        navigate(pathName)
+      }, 500)
     }
   }
 
-  window.addEventListener("openForeground", () => {
-    setVisible(true)
-  })
   window.addEventListener("topLeftOpen", () => {
     setVisible(false)
   })

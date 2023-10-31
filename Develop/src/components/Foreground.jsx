@@ -61,8 +61,6 @@ export default function Foreground({triangleLength}){
     setStyle(newClipPath)
   })
 
-  window.addEventListener("openForeground", () => {setStyle(clipPath)})
-
   return (
     <div style={style} className='bg-black text-white w-screen h-screen transition-[clip-path] ease-in-out delay-300 z-10'>
       <div className="relative w-full h-auto">

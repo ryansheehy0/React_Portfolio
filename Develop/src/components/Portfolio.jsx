@@ -1,9 +1,24 @@
 export default function Portfolio(){
 
   return (
-    <div className={`w-screen h-screen absolute top-0 left-0 bg-white text-black ${visible ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"} transition-opacity ease-in-out delay-300 grid grid-cols-1 justify-items-center`}>
-      <h2 className="cursor-pointer absolute pt-6 left-8 text-4xl" onClick={onClickBack}>&lt; Back</h2>
-      <h1 className="pt-4">Portfolio</h1>
-    </div>
+    <>
+      <div className="">
+        {/* Adrift in Space */}
+          <div className="bg-[url('/portfolio/adrift_in_space.png')] bg-cover bg-no-repeat bg-center rounded w-1/2">
+            <a href="https://github.com/ryansheehy0/Adrift_In_Space" target="_blank" className="no-underline text-white hover:no-underline hover:text-white">Adrift In Space</a>
+            <p className="text-white">JavaScript, Tailwindcss, Handlebars, NodeJS, Express, MySQL</p>
+          </div>
+        {/* Random Flavors */}
+      </div>
+      <div>
+        {/* Cheat Sheets */}
+        {/* Null Todos */}
+      </div>
+      <div>
+        {/* Project 3 */}
+      </div>
+    </>
   )
 }
+
+export const pageTitle = "Portfolio"
