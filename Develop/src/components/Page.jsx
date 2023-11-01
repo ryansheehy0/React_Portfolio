@@ -14,7 +14,7 @@ export default function Page({pageTitle, PageComponent}){
     <div className={`w-screen h-screen absolute top-0 left-0 bg-white text-black pointer-events-auto transition-opacity ease-in-out delay-300 grid grid-cols-1 grid-rows-6 justify-items-center`}>
       <h2 className="cursor-pointer absolute pt-6 left-8 text-4xl" onClick={onClickBack}>&lt; Back</h2>
       <h1 className="pt-4 row-span-1">{pageTitle}</h1>
-      <div className="overflow-y-auto row-span-4">
+      <div className="overflow-y-auto row-span-4 grid justify-items-center w-4/5">
         <PageComponent />
       </div>
       <div className="flex row-span-1">

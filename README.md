@@ -13,3 +13,7 @@
   - Resume
     - Blank PDF for now
 - Add comments
+- Deploy on netlify
+
+Must have components:
+  Project for the portfolio
