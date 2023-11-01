@@ -1,5 +1,5 @@
-import Project from "./Project"
-import {projects} from "./projects"
+import Project from "./projects/Project"
+import {projects} from "./projects/projects"
 
 export default function Portfolio(){
 

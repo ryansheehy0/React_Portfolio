@@ -1,11 +1,11 @@
-import Foreground from "./components/Foreground"
-import Corner from "./components/Corner"
-import {corners, triangleLength} from "./components/corners"
+import Foreground from "./components/frontPage/Foreground"
+import Corner from "./components/frontPage/Corner"
+import {corners, triangleLength} from "./components/frontPage/corners"
 import React from "react"
 import {Route, Routes} from "react-router-dom"
 import Page from "./components/Page"
-  import AboutMe, {pageTitle as pageTitleAboutMe} from "./components/AboutMe"
-  import Portfolio, {pageTitle as pageTitlePortfolio} from "./components/Portfolio"
+  import AboutMe, {pageTitle as pageTitleAboutMe} from "./components/pages/AboutMe"
+  import Portfolio, {pageTitle as pageTitlePortfolio} from "./components/pages/Portfolio"
 
 export default function App() {
 
