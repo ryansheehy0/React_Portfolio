@@ -43,13 +43,12 @@ export default function Contact(){
           onChange={(event) => {setMessage(event.value)}}
           type="text"
           placeholder="Message"
-          className="block focus:outline-none rounded p-2 h-fit bg-black col-span-2 w-full h-36"
+          className="block focus:outline-none rounded p-2 bg-black col-span-2 w-full h-36"
         />
         <button type="submit" className="block focus:outline-none rounded p-2 h-fit bg-black col-span-2 w-full">
           Submit
         </button>
       </form>
-      {/*isValidEmail ? null : <p className="text-sm text-red-500">Please enter a valid email address</p>*/}
       {/*Add telephone and email address w/ images*/}
     </>
   )

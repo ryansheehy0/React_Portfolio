@@ -7,6 +7,7 @@ import Page from "./components/Page"
   import AboutMe, {pageTitle as pageTitleAboutMe} from "./components/pages/AboutMe"
   import Portfolio, {pageTitle as pageTitlePortfolio} from "./components/pages/Portfolio"
   import Contact, {pageTitle as pageTitleContact} from "./components/pages/Contact"
+  import Resume, {pageTitle as pageTitleResume} from "./components/pages/Resume"
 
 export default function App() {
 
@@ -32,6 +33,9 @@ export default function App() {
         }/>
         <Route path="/contact" element={
           <Page pageTitle={pageTitleContact} PageComponent={Contact}/>
+        }/>
+        <Route path="/resume" element={
+          <Page pageTitle={pageTitleResume} PageComponent={Resume}/>
         }/>
       </Routes>
     </>
