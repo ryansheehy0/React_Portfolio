@@ -15,14 +15,14 @@ export default function App() {
     <>
       <Routes>
         <Route path="/" element={
-          <>
+          <div className="w-full h-full bg-white overflow-hidden">
             {/* Corners */}
               <Corner triangleLength={triangleLength} {...corners.topLeft} />
               <Corner triangleLength={triangleLength} {...corners.topRight} />
               <Corner triangleLength={triangleLength} {...corners.bottomLeft} />
               <Corner triangleLength={triangleLength} {...corners.bottomRight} />
             <Foreground triangleLength={triangleLength} />
-          </>
+          </div>
         }/>
         {/* Pages */}
         <Route path="/about-me" element={

@@ -7,13 +7,6 @@ export const projects = [
     deployedSiteLink: ""
   },
   {
-    title: "Random Flavors",
-    description: "JavaScript/CSS/Tailwind",
-    imagePath: "/portfolio/random_flavors_screenshot.png",
-    githubLink: "https://github.com/ryansheehy0/Random_Flavors",
-    deployedSiteLink: "https://ryansheehy0.github.io/Random_Flavors/"
-  },
-  {
     title: "Ryan Sheehy Cheat Sheets",
     description: "Markdown/CS/Math/etc",
     imagePath: "/portfolio/cheatsheet.jpeg",
@@ -40,5 +33,12 @@ export const projects = [
     imagePath: "/portfolio/security",
     githubLink: "",
     deployedSiteLink: ""
+  },
+  {
+    title: "Random Flavors",
+    description: "JavaScript/CSS/Tailwind",
+    imagePath: "/portfolio/random_flavors_screenshot.png",
+    githubLink: "https://github.com/ryansheehy0/Random_Flavors",
+    deployedSiteLink: "https://ryansheehy0.github.io/Random_Flavors/"
   },
 ]
