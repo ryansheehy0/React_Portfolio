@@ -64,9 +64,9 @@ export default function Foreground({triangleLength}){
   return (
     <div style={style} className='bg-black text-white w-screen h-screen transition-[clip-path] ease-in-out delay-300 z-10'>
       <div className="relative w-full h-auto">
-        <img src="/profile_picture.png" className="w-[1000px] h-auto absolute -top-32 right-[calc(220px+25%)]"/>
+        <img src="/profile_picture.png" className="w-[1000px] h-auto absolute -top-32 right-[calc(220px+25%)] hidden md:inline"/>
       </div>
-      <h1 className="text-9xl text-white absolute right-[calc(25%-50px)] top-1/2 -translate-y-1/2 text-center">Ryan<br/>Sheehy</h1>
+      <h1 className="sm:text-9xl text-7xl text-white absolute right-[calc(25%-50px)] top-1/2 -translate-y-1/2 text-center">Ryan<br/>Sheehy</h1>
     </div>
   )
 }

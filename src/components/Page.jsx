@@ -12,7 +12,10 @@ export default function Page({pageTitle, PageComponent}){
 
   return (
     <div className={`w-full h-fit min-h-[100vh] absolute top-0 left-0 bg-white text-black pointer-events-auto transition-opacity ease-in-out delay-300 grid grid-cols-1 justify-items-center`}>
-      <h2 className="cursor-pointer absolute pt-6 left-8 text-4xl" onClick={onClickBack}>&lt; Back</h2>
+      <h2 className="cursor-pointer absolute pt-6 left-8 text-4xl" onClick={onClickBack}>
+        <span className="hidden sm:inline">&lt; Back</span>
+        <span className="sm:hidden">&lt;</span>
+      </h2>
       <h1 className="pt-4 pb-16 row-span-1 text-6xl">{pageTitle}</h1>
       <div className="row-span-4 grid justify-items-center w-4/5">
         <PageComponent />

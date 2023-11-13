@@ -68,13 +68,13 @@ export default function Contact(){
           Submit
         </button>
       </form>
-      <div className="w-full h-fit flex items-center justify-center">
-        <div className="bg-black rounded mr-4 mt-8 relative w-[350px] h-[250px] flex items-center justify-center flex-col">
+      <div className="w-full h-fit flex items-center justify-center sm:flex-row flex-col">
+        <div className="bg-black rounded sm:mr-4 mt-8 relative w-[350px] h-[250px] flex items-center justify-center flex-col">
           <div style={{backgroundImage: `url(/phone_image.jpg)`}} className="bg-cover bg-no-repeat bg-center w-[350px] h-[250px] opacity-40 absolute"></div>
           <p className="w-full text-white text-center text-xl z-10">Phone</p>
           <p className="w-full text-white text-center text-xl z-10">(408) 806-3989</p>
         </div>
-        <div className="bg-black rounded ml-4 mt-8 relative w-[350px] h-[250px] flex items-center justify-center flex-col">
+        <div className="bg-black rounded sm:ml-4 mt-8 relative w-[350px] h-[250px] flex items-center justify-center flex-col">
           <div style={{backgroundImage: `url(/email_image.jpg)`}} className="bg-cover bg-no-repeat bg-center w-[350px] h-[250px] opacity-40 absolute"></div>
           <p className="w-full text-white text-center text-xl z-10">Email</p>
           <p className="w-full text-white text-center text-xl z-10">ryansheehy0@gmail.com</p>
