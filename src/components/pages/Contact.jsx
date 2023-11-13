@@ -1,25 +1,41 @@
-import { useState } from "react"
+import { useState, useRef } from "react"
+import emailjs from "@emailjs/browser"
 
 export default function Contact(){
+  const form = useRef()
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
-  const [isValidEmail, setIsValidEmail] = useState(true)
   const [subject, setSubject] = useState("")
   const [message, setMessage] = useState("")
 
-  function handleSubmit(event){
+  async function handleSubmit(event){
     event.preventDefault()
+    const serviceId = "service_e1l2mww"
+    const templateId = "template_b8orzrf"
+    const publicKey = "x-2GXMzV_2EEN_Eum"
+    try{
+      const result = await emailjs.sendForm(serviceId, templateId, form.current, publicKey)
+      console.log(result.text)
+
+      setName("")
+      setEmail("")
+      setSubject("")
+      setMessage("")
+    }catch(error){
+      console.log(error.text);
+    }
   }
 
   return (
     <>
-      <form className="text-white grid grid-cols-2 justify-items-center h-fit gap-4" onSubmit={handleSubmit}>
+      <form ref={form} className="text-white grid grid-cols-2 justify-items-center h-fit gap-4" onSubmit={handleSubmit}>
         <input
           value={name}
           onChange={(event) => {setName(event.value)}}
           type="text"
           required
           placeholder="Your Name"
+          name="name"
           className="inline-block focus:outline-none rounded p-2 h-fit bg-black col-span-1 w-full"
         />
         <input
@@ -28,6 +44,7 @@ export default function Contact(){
           type="email"
           required
           placeholder="Your Email"
+          name="email"
           className="inline-block focus:outline-none rounded p-2 h-fit bg-black col-span-1 w-full"
         />
         <input
@@ -36,6 +53,7 @@ export default function Contact(){
           type="text"
           required
           placeholder="Subject"
+          name="subject"
           className="block focus:outline-none rounded p-2 h-fit bg-black col-span-2 w-full"
         />
         <textarea
@@ -43,6 +61,7 @@ export default function Contact(){
           onChange={(event) => {setMessage(event.value)}}
           type="text"
           placeholder="Message"
+          name="message"
           className="block focus:outline-none rounded p-2 bg-black col-span-2 w-full h-36"
         />
         <button type="submit" className="block focus:outline-none rounded p-2 h-fit bg-black col-span-2 w-full">

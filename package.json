@@ -11,6 +11,7 @@
     "build:tailwind": "tailwindcss build src/index.css -o public/tailwind.css"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "react": "^18.2.0"
   },
   "devDependencies": {
